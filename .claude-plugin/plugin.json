@@ -1,0 +1,32 @@
+{
+  "name": "rbai",
+  "displayName": "RBAi",
+  "version": "1.6.9",
+  "description": "RBAi, the research assistant for the life sciences, in Claude Code: the rbai skill (the whole CLI) and the RBAi MCP server.",
+  "author": {
+    "name": "The Dream Lab Innovations",
+    "email": "hari@thedreamlabinnovations.com",
+    "url": "https://rbai.thedreamlabinnovations.com"
+  },
+  "homepage": "https://rbai.thedreamlabinnovations.com/docs/cli-access",
+  "keywords": [
+    "rbai",
+    "life-sciences",
+    "bioinformatics",
+    "biology",
+    "literature-review",
+    "galaxy",
+    "protein-structure",
+    "research-assistant",
+    "mcp"
+  ],
+  "mcpServers": {
+    "rbai": {
+      "command": "rbai",
+      "args": [
+        "mcp",
+        "serve"
+      ]
+    }
+  }
+}

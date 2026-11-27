@@ -1,0 +1,85 @@
+name: Something didn't work
+description: rbai stopped with an error, printed something wrong, or didn't do what its documentation says.
+title: "Bug: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please don't paste an API key, a sign-in code or a token anywhere in this form.
+        For a security problem, use the **Security** tab instead (see SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: rbai version
+      description: What `rbai --version` prints.
+      placeholder: "1.6.9"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Windows Subsystem for Linux (WSL)
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: os-details
+    attributes:
+      label: Operating system version and terminal
+      description: For example "Windows 11, Windows Terminal" or "Ubuntu 24.04, GNOME Terminal".
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: How did you install rbai?
+      options:
+        - The install script (curl or wget, on macOS or Linux)
+        - The PowerShell installer (Windows)
+        - npm (npm install -g rbai-cli)
+        - Another way
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: The command you ran
+      description: The exact command, or what you typed in the chat.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: What happened
+      description: What rbai printed, including any error message. Remove anything private first.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of rbai doctor
+      description: Run `rbai doctor` and paste what it prints. Remove your email address if you'd rather not share it.
+      render: text
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen?
+      description: The date and time, with your time zone. It helps us find it in our records.
+      placeholder: 27 Nov 2026, 14:30 IST
+  - type: checkboxes
+    id: no-secrets
+    attributes:
+      label: Before you send
+      options:
+        - label: I haven't included an API key, a sign-in code or a token.
+          required: true

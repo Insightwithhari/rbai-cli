@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rbai",
+  "version": "1.6.9",
+  "description": "RBAi, the research assistant for the life sciences: literature reviews, Galaxy analyses, protein structures, projects and the RBAi assistant, through the rbai CLI and its MCP server.",
+  "author": {
+    "name": "The Dream Lab Innovations",
+    "email": "hari@thedreamlabinnovations.com",
+    "url": "https://rbai.thedreamlabinnovations.com"
+  },
+  "homepage": "https://rbai.thedreamlabinnovations.com/docs/cli-access",
+  "keywords": [
+    "rbai",
+    "life sciences",
+    "bioinformatics",
+    "literature review",
+    "galaxy",
+    "protein structure",
+    "uniprot",
+    "pubmed",
+    "clinvar",
+    "research assistant"
+  ]
+}

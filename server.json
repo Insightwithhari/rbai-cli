@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.thedreamlabinnovations/rbai",
+  "title": "RBAi",
+  "description": "RBAi, the life-science research assistant: reviews, Galaxy, structures, projects, files",
+  "version": "1.6.9",
+  "websiteUrl": "https://rbai.thedreamlabinnovations.com/docs/cli-access",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "rbai-cli",
+      "version": "1.6.9",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        },
+        {
+          "type": "positional",
+          "value": "serve"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "RBAI_API_KEY",
+          "description": "An RBAi API key (Settings → API keys). Not needed after `rbai auth login` on this computer.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

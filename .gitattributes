@@ -1,0 +1,4 @@
+# Every text file is stored and checked out with LF line endings, on Windows too: install.sh must keep LF to run.
+* text=auto eol=lf
+*.png binary
+*.gif binary

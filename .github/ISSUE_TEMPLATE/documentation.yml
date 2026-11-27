@@ -1,0 +1,27 @@
+name: Documentation problem
+description: Something in the README, the user guide, the command reference or the agent kit is wrong, missing or hard to follow.
+title: "Docs: "
+labels: ["documentation", "triage"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where is it?
+      description: The link to the page or the file, and the section.
+      placeholder: https://github.com/Insightwithhari/rbai-cli/blob/main/docs/reference.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or missing?
+      description: Quote the sentence if you can, and say what you expected to read.
+    validations:
+      required: true
+  - type: checkboxes
+    id: no-secrets
+    attributes:
+      label: Before you send
+      options:
+        - label: I haven't included an API key, a sign-in code or a token.
+          required: true

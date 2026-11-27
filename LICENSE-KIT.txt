@@ -1,0 +1,10 @@
+Copyright (c) 2026 The Dream Lab Innovations. All rights reserved.
+
+This kit (instructions and configuration files for AI agents and IDEs) is provided so that people with an
+RBAi account can use the RBAi CLI from their own AI tools. You may download it, install it in your own AI
+tools, and copy its files into your own projects for that purpose.
+
+You may not sell it, offer it as part of another product, or use it with any service other than RBAi.
+Use of RBAi is subject to the RBAi Terms of Service: https://rbai.thedreamlabinnovations.com/terms.
+
+THE KIT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

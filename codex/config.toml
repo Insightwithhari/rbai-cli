@@ -1,0 +1,5 @@
+# The RBAi MCP server for Codex: add this block to ~/.codex/config.toml.
+# It uses the key saved by `rbai auth login`; no key goes into this file.
+[mcp_servers.rbai]
+command = "rbai"
+args = ["mcp", "serve"]

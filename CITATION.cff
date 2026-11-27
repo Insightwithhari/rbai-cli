@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: If RBAi helped your research, please cite the RBAi CLI as below, with the version you used (rbai --version).
+type: software
+title: "RBAi CLI"
+abstract: >-
+  The RBAi CLI (the command rbai, npm package rbai-cli) brings RBAi, a
+  research assistant for the life sciences, to the terminal, to scripts and
+  to AI coding agents. It answers research questions with live biological
+  databases, runs analyses in a cloud sandbox, writes literature reviews, runs
+  Galaxy tools and works with protein structures.
+authors:
+  - family-names: Chaudhary
+    given-names: Hariom
+    affiliation: The Dream Lab Innovations
+contact:
+  - name: The Dream Lab Innovations
+    email: hari@thedreamlabinnovations.com
+    website: "https://thedreamlabinnovations.com"
+repository: "https://github.com/Insightwithhari/rbai-cli"
+repository-artifact: "https://www.npmjs.com/package/rbai-cli"
+url: "https://rbai.thedreamlabinnovations.com/docs/cli-access"
+license-url: "https://github.com/Insightwithhari/rbai-cli/blob/main/LICENSE.md"
+keywords:
+  - bioinformatics
+  - computational biology
+  - life sciences
+  - research assistant
+  - command-line interface
+  - Model Context Protocol

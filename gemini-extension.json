@@ -1,0 +1,15 @@
+{
+  "name": "rbai",
+  "version": "1.6.9",
+  "description": "RBAi, the research assistant for the life sciences: the rbai CLI skill and the RBAi MCP server.",
+  "mcpServers": {
+    "rbai": {
+      "command": "rbai",
+      "args": [
+        "mcp",
+        "serve"
+      ]
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

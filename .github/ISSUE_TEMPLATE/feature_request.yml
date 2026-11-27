@@ -1,0 +1,40 @@
+name: Suggestion
+description: An idea for a new command, a better answer, or something rbai should do differently.
+title: "Suggestion: "
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The research task or the step that is hard today, in your own words.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: What you would like rbai to do. An example command or an example answer helps.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part is it about?
+      options:
+        - The chat in the terminal
+        - rbai ask and scripts
+        - Working in a folder on my computer
+        - Literature reviews
+        - Galaxy
+        - Structures
+        - The agent kit (Claude Code, Gemini CLI, Codex, Cursor, VS Code or another AI tool)
+        - Installing and updating
+        - Something else
+  - type: checkboxes
+    id: no-secrets
+    attributes:
+      label: Before you send
+      options:
+        - label: I haven't included an API key, a sign-in code or a token.
+          required: true

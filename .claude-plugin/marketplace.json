@@ -1,0 +1,15 @@
+{
+  "name": "thedreamlabinnovations",
+  "owner": {
+    "name": "The Dream Lab Innovations",
+    "email": "hari@thedreamlabinnovations.com"
+  },
+  "plugins": [
+    {
+      "name": "rbai",
+      "source": "./",
+      "description": "RBAi, the research assistant for the life sciences: the rbai skill and the RBAi MCP server.",
+      "version": "1.6.9"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security problem
+    url: https://github.com/Insightwithhari/rbai-cli/security/advisories/new
+    about: Please report security problems privately here, not in a public issue.
+  - name: Read the documentation
+    url: https://rbai.thedreamlabinnovations.com/docs/cli-access
+    about: Install, sign in, the chat, working in a folder, and troubleshooting.
+  - name: Account, plan or payment
+    url: https://rbai.thedreamlabinnovations.com/contact
+    about: Questions about your own account don't belong in a public issue. Contact us here.
+  - name: Use RBAi in your browser
+    url: https://rbai.thedreamlabinnovations.com
+    about: The same RBAi and the same account, with nothing to install.

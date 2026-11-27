@@ -1,0 +1,33 @@
+RBAi CLI
+Copyright (c) 2026 The Dream Lab Innovations. All rights reserved.
+
+This software, the RBAi command-line interface distributed as the npm package "rbai-cli" and as
+standalone "rbai" programs (the "Software"), is proprietary software of The Dream Lab Innovations.
+It is not open-source software.
+
+Use of the Software is subject to the RBAi Terms of Service:
+https://rbai.thedreamlabinnovations.com/terms
+
+You may install and run the Software only to use the RBAi service under those Terms.
+
+You may not, and may not allow anyone else to:
+  (a) copy the Software, except as needed to install and run it;
+  (b) modify, adapt, translate or create derivative works of the Software;
+  (c) distribute, publish, sublicense, sell, rent, lease or lend the Software, or otherwise make it
+      available to anyone else;
+  (d) reverse engineer, decompile or disassemble the Software, or attempt to derive its source
+      code, except to the extent that applicable law expressly permits this despite this
+      limitation;
+  (e) remove or change any copyright or other notice in the Software.
+
+The Software includes third-party components that are licensed under their own terms. Those
+licences are reproduced in the file THIRD-PARTY-NOTICES, and nothing in this licence limits your
+rights under them.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NON-INFRINGEMENT. TO THE EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE DREAM LAB INNOVATIONS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+Contact: hari@thedreamlabinnovations.com
