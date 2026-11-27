@@ -13,6 +13,7 @@
   <a href="https://www.npmjs.com/package/rbai-cli"><img alt="npm" src="https://img.shields.io/npm/v/rbai-cli?label=npm&color=0B65C9"></a>
   <a href="https://rbai.thedreamlabinnovations.com/docs/cli-access"><img alt="Documentation" src="https://img.shields.io/badge/docs-read-0B65C9"></a>
   <a href="CHANGELOG.md"><img alt="Changelog" src="https://img.shields.io/badge/changelog-latest-64748B"></a>
+  <a href="https://doi.org/10.5281/zenodo.24590545"><img alt="DOI 10.5281/zenodo.24590545" src="https://zenodo.org/badge/DOI/10.5281/zenodo.24590545.svg"></a>
 </p>
 
 <p align="center">
@@ -294,12 +295,13 @@ you may do with each.
 
 ## How to cite
 
-If RBAi helped your research, you can cite the CLI. GitHub's **Cite this repository** button, in the right-hand
-column of this page, gives a citation in APA and BibTeX from [CITATION.cff](CITATION.cff). Please add the version
-you used, which `rbai --version` prints. For example:
+If RBAi helped your research, you can cite the CLI. Each version has its own DOI on
+[Zenodo](https://doi.org/10.5281/zenodo.24590545), and that link always leads to the newest one. GitHub's
+**Cite this repository** button, in the right-hand column of this page, gives a citation in APA and BibTeX from
+[CITATION.cff](CITATION.cff). Please cite the version you used, which `rbai --version` prints. For example:
 
 > Chaudhary, H. (2026). *RBAi CLI* (Version 1.6.9) [Computer software]. The Dream Lab Innovations.
-> https://github.com/Insightwithhari/rbai-cli
+> https://doi.org/10.5281/zenodo.24590546
 
 ## Who makes RBAi
 
