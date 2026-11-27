@@ -1,0 +1,26 @@
+{
+  "title": "RBAi CLI",
+  "upload_type": "software",
+  "version": "1.6.9",
+  "description": "<p>The RBAi CLI, the command <code>rbai</code>, brings RBAi, a research assistant for the life sciences, to the terminal, to scripts and to AI coding tools. It answers research questions with live biological databases such as UniProt, PDB, ClinVar, Ensembl, ChEMBL and PubMed, runs analyses in a cloud sandbox, writes literature reviews, and runs Galaxy tools on the user's own Galaxy account. It needs an RBAi account, and there is a free plan.</p><p>This record holds the CLI's public repository at this version: the documentation, the changelog, the installer scripts, the agent kit and examples. The CLI itself is proprietary software of The Dream Lab Innovations, so its program code is not part of this record. Builds for each system and their checksums are at https://cli.thedreamlabinnovations.com, and the package is on npm as rbai-cli.</p>",
+  "creators": [
+    {
+      "name": "Chaudhary, Hariom",
+      "affiliation": "The Dream Lab Innovations"
+    }
+  ],
+  "license": "other-closed",
+  "access_right": "open",
+  "keywords": [
+    "bioinformatics",
+    "computational biology",
+    "life sciences",
+    "research assistant",
+    "command-line tool",
+    "Model Context Protocol",
+    "protein structure",
+    "genomics",
+    "literature review",
+    "Galaxy"
+  ]
+}
