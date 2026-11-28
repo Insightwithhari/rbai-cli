@@ -28,7 +28,7 @@ wget -qO- https://cli.thedreamlabinnovations.com/install.sh | sh
 
 | To | Do this |
 | --- | --- |
-| Install a given version | `curl -fsSL https://cli.thedreamlabinnovations.com/install.sh \| RBAI_VERSION=1.6.9 sh`, or in PowerShell `$env:RBAI_VERSION = '1.6.9'; irm https://cli.thedreamlabinnovations.com/install.ps1 \| iex` |
+| Install a given version | `curl -fsSL https://cli.thedreamlabinnovations.com/install.sh \| RBAI_VERSION=1.7.0 sh`, or in PowerShell `$env:RBAI_VERSION = '1.7.0'; irm https://cli.thedreamlabinnovations.com/install.ps1 \| iex` |
 | Install into another folder | Set `RBAI_INSTALL_DIR` first, for example `RBAI_INSTALL_DIR="$HOME/tools/rbai"`, or in PowerShell `$env:RBAI_INSTALL_DIR = 'D:\Tools\rbai'` |
 | Leave your PATH alone | Set `RBAI_NO_MODIFY_PATH=1` first |
 

@@ -2,6 +2,32 @@
 
 All notable changes to the RBAi CLI (`rbai`, npm package `rbai-cli`).
 
+## 1.7.0 (28 Nov 2026)
+Added:
+- `rbai galaxy ask` asks you before a Galaxy step that cannot be undone: deleting or purging a history, a dataset or a
+  workflow, cleaning up storage, or publishing a history. RBAi's new Galaxy engine waits for your decision before such
+  a step runs. At a terminal the CLI shows the tool and its input and asks "Approve? [y/N]". y approves, n or Enter
+  denies, and Ctrl-C decides nothing. After your decision it follows RBAi as it goes on. With nobody to ask (a pipe or
+  a script), nothing is decided for you: the run exits 8 with the code NEEDS_APPROVAL and says that the step waits for
+  you in Galaxy Lab on the web.
+- `rbai galaxy chat` asks too. The full-screen chat shows a card, where 1 approves and 2 denies (Deny is highlighted
+  first) and Esc leaves the decision to Galaxy Lab on the web. With `--plain` it asks the same "Approve? [y/N]" line.
+- In stream-json, `rbai galaxy ask` writes an `approval` event (`approvalId`, `toolCallId`, `toolName`, `input`) when a
+  step waits for your approval.
+Changed:
+- A Galaxy answer that goes on past its first run on the server is followed to its end, as `rbai ask` follows a long
+  answer. That needs your Galaxy key saved in your account (`rbai galaxy key set`). With GALAXY_API_KEY set for one
+  run, the answer ends with its first run, because the server never stores a key sent with a request.
+- When the server no longer waits for an approval (it was decided elsewhere, a newer message was sent, or 7 days
+  passed), the run ends with exit 1, "Not run:" and the reason, and says how to ask again. When the decision cannot be
+  sent, the CLI says so and that the step still waits for it.
+- The npm page's Homepage, Repository and Issues links lead to the CLI's public home,
+  https://github.com/Insightwithhari/rbai-cli, with its README, docs, changelog and issues.
+
+The Galaxy changes work when Galaxy Lab runs on RBAi's new Galaxy engine, which Galaxy Lab moves to after this release.
+1.6.9 and earlier neither answer an approval nor follow a continued Galaxy answer. On today's Galaxy path nothing
+changes.
+
 ## 1.6.9 (27 Nov 2026)
 Fixed:
 - When a long answer that went on in the background failed on the server, `rbai ask`, `rbai chat` and

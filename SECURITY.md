@@ -38,4 +38,4 @@ reports about the CLI and the RBAi service are welcome through the same private 
 The installers check every download against its SHA-256 checksum before they install it. To check a file
 yourself, compare its SHA-256 with the list for its version at
 `https://cli.thedreamlabinnovations.com/cli/<version>/SHA256SUMS`, for example
-[the list for 1.6.9](https://cli.thedreamlabinnovations.com/cli/1.6.9/SHA256SUMS).
+[the list for 1.7.0](https://cli.thedreamlabinnovations.com/cli/1.7.0/SHA256SUMS).

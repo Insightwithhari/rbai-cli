@@ -1,7 +1,7 @@
 {
   "name": "rbai",
   "displayName": "RBAi",
-  "version": "1.6.9",
+  "version": "1.7.0",
   "description": "RBAi, the research assistant for the life sciences, in Claude Code: the rbai skill (the whole CLI) and the RBAi MCP server.",
   "author": {
     "name": "The Dream Lab Innovations",

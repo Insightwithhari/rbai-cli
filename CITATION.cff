@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: If RBAi helped your research, please cite the RBAi CLI as below, with the version you used (rbai --version).
 type: software
 title: "RBAi CLI"
-version: "1.6.9"
+version: "1.7.0"
 doi: 10.5281/zenodo.24590545
 identifiers:
   - type: doi

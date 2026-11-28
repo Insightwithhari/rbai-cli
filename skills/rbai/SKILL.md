@@ -4,11 +4,11 @@ description: "Drive RBAi, the research assistant for the life sciences, through 
 license: "Proprietary. Use with an RBAi account under the RBAi Terms of Service: https://rbai.thedreamlabinnovations.com/terms"
 compatibility: "Needs the rbai command (the installer at cli.thedreamlabinnovations.com, or npm install -g rbai-cli with Node.js 22 or later), network access to rbai.thedreamlabinnovations.com and a signed-in RBAi account"
 metadata:
-  version: "1.6.9"
+  version: "1.7.0"
   homepage: "https://rbai.thedreamlabinnovations.com/docs/cli-access"
 ---
 
-# Using the RBAi CLI from an AI agent (rbai 1.6.9)
+# Using the RBAi CLI from an AI agent (rbai 1.7.0)
 
 RBAi is a research assistant for the life sciences, made by The Dream Lab Innovations
 (https://rbai.thedreamlabinnovations.com). It answers biomedical questions with live databases and tools
@@ -26,7 +26,7 @@ JSON. When this guide and the CLI disagree, the CLI wins: it describes the versi
 ## 1. Check that rbai is installed
 
 ```sh
-rbai --version          # 1.6.9 or later
+rbai --version          # 1.7.0 or later
 rbai doctor -o json     # Node, the config folder, the network, the API and the sign-in, each with a fix
 ```
 
@@ -87,7 +87,7 @@ rbai auth status -o json        # exit 0: signed in (account, plan, profile); ex
 | 5 | limit reached (HTTP 402 credits or plan, HTTP 429 rate limit or quota); the server's message is printed | Out of credits, a plan limit, or a rate limit. Tell the user the message from stderr. On a rate limit wait a minute before one retry; never retry in a loop. |
 | 6 | network failure or timeout (no response from the server) | No answer from RBAi (network, DNS, proxy or timeout). Retry once after a short pause, then run `rbai doctor -o json` and tell the user what it says. |
 | 7 | server error (HTTP 5xx) | RBAi failed on its side (HTTP 5xx). Retry once; if it fails again, tell the user, with the request id printed on stderr. |
-| 8 | the agent asked a question and nobody was at the terminal to answer it (rbai ask without a TTY); answer with `rbai ask --session <id> "<answer>"` | RBAi asked the user a question (`rbai ask`, `rbai connect ask`). Show the question to the user and pass their answer on with `--session <id>` (section 5). Never answer it yourself. |
+| 8 | the agent asked a question, or a Galaxy step waits for the user's approval, and nobody was at the terminal to answer it (rbai ask or rbai galaxy ask without a TTY); answer a question with `rbai ask --session <id> "<answer>"`, and decide an approval in Galaxy Lab on the web | RBAi asked the user a question (`rbai ask`, `rbai connect ask`). Show the question to the user and pass their answer on with `--session <id>` (section 5). Never answer it yourself. With the code NEEDS_APPROVAL (`rbai galaxy ask`), a Galaxy step waits for the user's approval: tell the user what it would do, and that they approve or deny it in Galaxy Lab on the web. Never decide it, and send that conversation no new message first, because a new message ends the wait. |
 | 130 | interrupted (Ctrl-C) | Interrupted (Ctrl-C). Stop, and do not start it again unless the user asks. |
 
 ## 5. Ask the RBAi assistant: rbai ask
@@ -112,6 +112,7 @@ stdout is one JSON object per line:
 | `tool-progress` | `toolName`, `step`, `search`, `lab`, `counts` | A running tool's progress line. Connect's lab search (`search_methods`) also sends `search` (how many papers and labs match and what reading every lab would cost, before any paper is read) and each `lab` as its paper is read. |
 | `file` | `kind`, `id`, `name`, `mediaType`, `url`, `bytes`, `title`, `toolName` | The answer produced a file (a sandbox file: `rbai session file`). |
 | `ask-user` | `sessionId`, `callbackId`, `status`, `questions` | RBAi needs the user's answer to go on (see exit 8 below). |
+| `approval` | `approvalId`, `toolCallId`, `toolName`, `input` | `rbai galaxy ask` only: a Galaxy step that cannot be undone waits for the user's approval (see exit 8 below). |
 | `turn-continues` | `jobId`, `answerId` | A long answer goes on in the background on the server. Keep reading. |
 | `local-call` | `toolCallId`, `tool`, `input` | With `--local`: RBAi asked this computer to run a local tool (`local_read`, `local_run`, …). |
 | `local-result` | `toolCallId`, `ok`, `denied`, `summary`, `exitCode` | What that local call came to here; `denied`: the flags did not allow it. |
@@ -143,6 +144,11 @@ stdout is one JSON object per line:
   the questions from the `ask-user` event (or the `question` field), wait for their reply, then run
   `rbai ask --session <sessionId> "<their answer>" --output-format stream-json --no-input`.
   Never invent the answer, never pick an option for them, and never answer from your own knowledge instead.
+- **Exit 8 with the code NEEDS_APPROVAL** (`rbai galaxy ask`): a Galaxy step that cannot be undone (deleting or
+  purging a history, a dataset or a workflow, cleaning up storage, publishing a history) waits for the user's
+  approval, and it has not run. Tell the user what the `approval` event names, and that they approve or deny it in
+  Galaxy Lab on the web, where the conversation shows it. Never decide it for them. Send no new message to that
+  conversation first: a new message ends the wait, and the step does not run.
 - `--no-questions` runs a turn without the question tool (RBAi then asks in its answer), for unattended
   jobs that must not stop on exit 8.
 - **`--local`: RBAi works in a folder on this computer.** `rbai ask --local` (the current folder) or

@@ -3,14 +3,14 @@
   "name": "com.thedreamlabinnovations/rbai",
   "title": "RBAi",
   "description": "RBAi, the life-science research assistant: reviews, Galaxy, structures, projects, files",
-  "version": "1.6.9",
+  "version": "1.7.0",
   "websiteUrl": "https://rbai.thedreamlabinnovations.com/docs/cli-access",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "rbai-cli",
-      "version": "1.6.9",
+      "version": "1.7.0",
       "runtimeHint": "npx",
       "transport": {
         "type": "stdio"

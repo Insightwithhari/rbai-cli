@@ -1,4 +1,4 @@
-# RBAi CLI (rbai 1.6.9)
+# RBAi CLI (rbai 1.7.0)
 
 RBAi is a research assistant for the life sciences. Its command line, `rbai` (npm package `rbai-cli`), works in
 the signed-in user's RBAi account: literature reviews, projects and sources, questions to the RBAi assistant,

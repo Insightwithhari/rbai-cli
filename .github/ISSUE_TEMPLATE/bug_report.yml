@@ -13,7 +13,7 @@ body:
     attributes:
       label: rbai version
       description: What `rbai --version` prints.
-      placeholder: "1.6.9"
+      placeholder: "1.7.0"
     validations:
       required: true
   - type: dropdown

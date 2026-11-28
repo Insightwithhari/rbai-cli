@@ -1,10 +1,10 @@
-# RBAi CLI reference (rbai 1.6.9)
+# RBAi CLI reference (rbai 1.7.0)
 
 RBAi is a research assistant for the life sciences (https://rbai.thedreamlabinnovations.com). Its command line,
 `rbai` (npm package `rbai-cli`), works in the signed-in user's RBAi account: projects, literature reviews,
 chats with the RBAi assistant, Galaxy, Structure Studio, slides, Report Writer pages, files and Connect.
 
-This reference is generated from the command registry of rbai 1.6.9 (`rbai help reference`), so it matches
+This reference is generated from the command registry of rbai 1.7.0 (`rbai help reference`), so it matches
 that version exactly. Programs can read the same data as JSON with `rbai commands --json`. For how an AI agent
 should use the CLI (sign-in, exit codes, `rbai ask`, recipes), see the agent guide: `rbai help agents`, or
 https://rbai.thedreamlabinnovations.com/docs/cli/agents.md.
@@ -67,7 +67,7 @@ The exit status is the contract; branch on it, never on message text.
 | 5 | limit reached (HTTP 402 credits or plan, HTTP 429 rate limit or quota); the server's message is printed |
 | 6 | network failure or timeout (no response from the server) |
 | 7 | server error (HTTP 5xx) |
-| 8 | the agent asked a question and nobody was at the terminal to answer it (rbai ask without a TTY); answer with `rbai ask --session <id> "<answer>"` |
+| 8 | the agent asked a question, or a Galaxy step waits for the user's approval, and nobody was at the terminal to answer it (rbai ask or rbai galaxy ask without a TTY); answer a question with `rbai ask --session <id> "<answer>"`, and decide an approval in Galaxy Lab on the web |
 | 130 | interrupted (Ctrl-C) |
 
 ## Environment variables

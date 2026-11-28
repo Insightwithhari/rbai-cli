@@ -1,6 +1,6 @@
 {
   "name": "rbai",
-  "version": "1.6.9",
+  "version": "1.7.0",
   "description": "RBAi, the research assistant for the life sciences: the rbai CLI skill and the RBAi MCP server.",
   "mcpServers": {
     "rbai": {
